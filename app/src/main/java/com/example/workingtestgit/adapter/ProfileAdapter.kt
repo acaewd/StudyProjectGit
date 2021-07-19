@@ -1,4 +1,4 @@
-package com.example.workingtestgit.Adapter
+package com.example.workingtestgit.adapter
 
 import android.view.LayoutInflater
 import android.view.View

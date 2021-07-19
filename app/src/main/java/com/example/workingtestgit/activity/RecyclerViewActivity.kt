@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.workingtestgit.Adapter.ProfileAdapter
+import com.example.workingtestgit.adapter.ProfileAdapter
 import com.example.workingtestgit.R
 import com.example.workingtestgit.items.Profiles
 import kotlinx.android.synthetic.main.activity_recycler_view.*
