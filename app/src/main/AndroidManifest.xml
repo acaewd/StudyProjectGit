@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WorkingTestGit">
-        <activity android:name=".activity.RecyclerViewActivity"></activity>
+        <activity android:name=".activity.RecyclerViewActivity" android:configChanges="orientation|screenSize"></activity>
         <activity android:name=".activity.ScrollViewActivity" />
         <activity android:name=".activity.UserPgActivity"></activity>
         <activity android:name=".activity.LoginActivity">

@@ -1,5 +1,7 @@
 package com.example.workingtestgit.activity
 
+import android.content.res.Configuration
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -27,8 +29,16 @@ class RecyclerViewActivity : AppCompatActivity() {
 
         )
 
-        //rv_profile.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        rv_profile.layoutManager = GridLayoutManager(this, 2)
+        // onCreat시 세로 가로 확인
+        var orientation = resources.configuration.orientation
+        if(orientation == Configuration.ORIENTATION_LANDSCAPE){
+            rv_profile.layoutManager = GridLayoutManager(this, 4)
+        }
+        if(orientation == Configuration.ORIENTATION_PORTRAIT){
+            rv_profile.layoutManager = GridLayoutManager(this, 2)
+        }
+
+        //rv_profile.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false) 그냥 리사이클뷰만 사용시
         rv_profile.setHasFixedSize(true)
 
         val mAdapter = ProfileAdapter(profileList)
@@ -67,6 +77,20 @@ class RecyclerViewActivity : AppCompatActivity() {
         btnRemoveInfo.setOnClickListener() {
             mAdapter.removeitem(mAdapter.getPosition())
             mAdapter.notifyDataSetChanged()
+        }
+
+    }
+
+    //세로 가로 화면 전환시 변화
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+
+        if(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+            rv_profile.layoutManager = GridLayoutManager(this, 2)
+        }
+
+        if(newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE){
+            rv_profile.layoutManager = GridLayoutManager(this, 4)
         }
 
     }
