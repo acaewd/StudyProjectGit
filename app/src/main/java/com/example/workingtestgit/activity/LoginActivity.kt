@@ -32,9 +32,7 @@ class LoginActivity : AppCompatActivity() {
         var edtPw = findViewById<EditText>(R.id.edtPw)
         var edtPwC = findViewById<EditText>(R.id.edtPwC)
 
-        var loginbutton = findViewById<Button>(R.id.btnLogin)
-
-        loginbutton.setOnClickListener(){
+        btnLogin.setOnClickListener(){
 
             id = edtId.text.toString().trim()
             pw = edtPw.text.toString().trim()
@@ -52,6 +50,9 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent(this, UserPgActivity::class.java)
                 intent.putExtra("Id",id)
                 intent.putExtra("Pw",pw)
+                edtId.setText("")
+                edtPw.setText("")
+                edtPwC.setText("")
                 startActivity(intent)
             }
         }
