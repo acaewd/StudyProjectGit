@@ -16,16 +16,12 @@ class UserPgActivity : AppCompatActivity() {
         val Id = intent.getStringExtra("Id").toString()
         val Pw = intent.getStringExtra("Pw").toString()
 
-        var checkButton = findViewById<Button>(R.id.btnCheck)
-
-        var nextButton = findViewById<Button>(R.id.btnNext)
-
-        checkButton.setOnClickListener(){
+        btnCheck.setOnClickListener(){
             Log.d("아이디:", Id)
             Log.d( "비밀번호:", Pw)
         }
 
-        nextButton.setOnClickListener(){
+        btnNext.setOnClickListener(){
             val intent = Intent(this, ScrollViewActivity::class.java)
             startActivity(intent)
         }
