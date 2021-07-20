@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import com.example.workingtestgit.R
+import kotlinx.android.synthetic.main.activity_user_pg.*
 
 class UserPgActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +28,10 @@ class UserPgActivity : AppCompatActivity() {
         nextButton.setOnClickListener(){
             val intent = Intent(this, ScrollViewActivity::class.java)
             startActivity(intent)
+        }
+
+        btnlogout.setOnClickListener(){
+            super.onBackPressed()
         }
 
     }

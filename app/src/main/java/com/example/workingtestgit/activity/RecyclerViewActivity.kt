@@ -79,6 +79,10 @@ class RecyclerViewActivity : AppCompatActivity() {
             mAdapter.notifyDataSetChanged()
         }
 
+        btnBack2.setOnClickListener(){
+            super.onBackPressed()
+        }
+
     }
 
     //세로 가로 화면 전환시 변화

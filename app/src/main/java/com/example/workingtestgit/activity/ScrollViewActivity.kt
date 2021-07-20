@@ -25,6 +25,8 @@ class ScrollViewActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnBack.setOnClickListener(){}
+        super.onBackPressed()
     }
 
     fun resizeImage(){

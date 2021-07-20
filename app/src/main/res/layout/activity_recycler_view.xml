@@ -47,16 +47,16 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:text="열기"
-        app:layout_constraintBottom_toTopOf="@+id/btnNext3"
+        app:layout_constraintBottom_toTopOf="@+id/btnBack2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnNext3"
+        android:id="@+id/btnBack2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="다음"
+        android:text="뒤로가기"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 
